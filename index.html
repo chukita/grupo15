@@ -1,14 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola grupo 15</title>
-</head>
-<body>
-    <h1>Hola!!!</h1>
-    <P>PROBANDO CON GITHUB</P>
-    <p> ahora inversa</p>
-</body>
+
+        <head>
+        
+            <title>Grupo 15</title>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        
+            <link rel="stylesheet" href="estilo.css">
+
+            <script>
+                
+                function suma(){
+
+                    var puntos = Number(document.getElementById("puntos").innerHTML);
+                    console.log("Los puntos son"+puntos);
+
+                    var suma = puntos + 1;
+                    document.getElementById("puntos").innerHTML = suma;
+
+                }
+
+                function calcular(){
+                    var puntos = Number(document.getElementById("puntos").innerHTML);
+
+                    if (puntos >= 10){
+                        alert("Suficiente!!!!");
+                    } else {
+                        alert("Falta....");
+
+                    }
+                }
+
+            </script>
+            
+
+                   
+        </head>
+
+        <body>
+
+            <div id="menu"> 
+                <div id="titulo"><h3>YO</h3></div>
+                <div id="navegacion" style="float: left; width: 30%;">
+                    <UL style="list-style: none;">
+                        <li style="float:left; width:100px"> <a href="index.html" class="texto_verde">QUIEN</a></li>
+                        <LI style="float:left; width:100px"> <a href="que.html">QUE</a></LI>
+                        <LI style="float:left; width:100px">  <a href="donde.html">DONDE</a></LI>
+                    </UL>
+                </div>
+            </div>
+
+            <div id="cuerpo" style="float: left; width: 100%; height:500px; background-color: #1abc9c; padding-top: 100px; padding-bottom: 100px;"> 
+
+                <h3 >QUIEN SOY?</h3>
+                    <p style="text-align: center;"><img src="img/aguila.jpg" style="border-radius: 200px; margin: 20px 0 20px 0;"></p>
+                <h3 >UN AVENTURERO</h3>
+
+            </div>
+
+            <div id="descripcion"> 
+                <form>
+                        <input type="button" value="CLICK PARA SUMAR PUNTOS" onclick="suma()">
+                        <P>TUS PUNTOS SON: <span id="puntos">0</span></P>
+
+                        <input type="button" value="CALCULAR" onclick="calcular()">
+                </form>
+
+
+            </div>
+            
+        </body>
+
 </html>
